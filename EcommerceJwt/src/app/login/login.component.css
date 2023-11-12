@@ -1,0 +1,87 @@
+/* register.component.scss */
+
+.background-container {
+
+  background-image: url('/assets/ecommerce3.jpg'); /* Set the correct path to your background image file inside the assets folder */
+ 
+    background-size: cover; /* This ensures the background image covers the entire container */
+    background-position: center center; /* This centers the background image horizontally and vertically */
+    background-repeat: no-repeat; /* This prevents the background image from repeating */
+    height: 100vh; /* Set the height of the container to 100% of the viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+  }
+
+.container {
+    max-width: 500px;
+   
+    background-color:whitesmoke;
+    padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  margin-left: auto; /* Automatically align the container to the right */
+    margin-right: 5%;
+
+    
+    
+}
+
+h2 {
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+
+    label {
+        font-weight: bold;
+    }
+
+    input {
+        width: 100%;
+        padding: 8px;
+        font-size: 16px;
+        border: 1px solid #ced4da;
+        border-radius: 4px;
+        transition: border-color 0.15s ease-in-out;
+    }
+
+    input:focus {
+        border-color: #80bdff;
+        outline: 0;
+        box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+    }
+
+    .text-danger {
+        color: #dc3545;
+        font-size: 14px;
+        margin-top: 4px;
+    }
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-accent:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+.btn-primary:disabled,
+.btn-primary.disabled {
+    background-color: #b3d7ff;
+    border-color: #b3d7ff;
+}
+.card{
+    background-color: whitesmoke
+}

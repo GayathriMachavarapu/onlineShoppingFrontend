@@ -1,0 +1,71 @@
+<div class="container mt-5">
+    <div class="card p-2">
+        <div class="row">
+            <div class="col-6">
+                <form #productForm="ngForm" (ngSubmit)="addProduct(productForm)">
+         <mat-form-field appearance="outline" class="w-100">
+            <mat-label>Product Name</mat-label>
+            <input matInput placeholder="Product Name" [(ngModel)]="product.productName" name="productName">
+          </mat-form-field>
+          <mat-form-field appearance="outline" class="w-100">
+            <mat-label>Product Description</mat-label>
+            <input matInput placeholder="Product Description" [(ngModel)]="product.productDescription" name="productDescription">
+          </mat-form-field>
+          <mat-form-field appearance="outline" class="w-100">
+            <mat-label>product Discounted Price</mat-label>
+            <input matInput placeholder="product Discounted Price"  [(ngModel)]="product.productDiscountedprice" name="productDiscountedprice">
+          </mat-form-field>
+          <mat-form-field appearance="outline" class="w-100">
+            <mat-label>product Actual Price</mat-label>
+            <input matInput placeholder="product Actual Price"  [(ngModel)]="product.productActualPrice" name="productActualPrice">
+          </mat-form-field>
+          <div align="end">
+            <button mat-stroked-button color="primary" style="margin-right: 3px;">Clear</button>
+          <button type="submit" *ngIf="isNewProduct" mat-stroked-button color="primary">Add Product</button>
+          <button type="submit" *ngIf="!isNewProduct" mat-stroked-button color="primary">Update Product</button>
+          </div>
+        </form>
+
+            </div>
+
+
+
+
+            <!-- image part -->
+            <div class="col-6">
+                <div>
+ 
+                  <div class="dropzone" appDrag (files)="fileDropped($event)">
+                    <div class="text-wrapper">
+                      <div class="centered">
+                      Drag and Drop your file or 
+                      <a (click)="selectfile.click()" class="browse-button">Browse</a>
+                    </div>
+                    </div>
+
+                  </div>
+
+
+                    <input #selectfile type="file" multiple value="select" 
+                (change)="onFileSelected($event)" style="display: none;">
+                </div>
+                <div class="mt-5">
+                    <div class="row">
+                        <mat-grid-list cols="4" rowHeight="1:1">
+                            <mat-grid-tile *ngFor="let file of product.productImages,let i=index;">
+                                <div style="position: relative">
+                                <span class="btn-remove-image" (click)="removeImage(i)">x</span>
+                                <img [src]="file.url"  width="100px" height="100px">
+                            </div>
+                            </mat-grid-tile>
+
+                        </mat-grid-list>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        
+
+    </div>
+</div>

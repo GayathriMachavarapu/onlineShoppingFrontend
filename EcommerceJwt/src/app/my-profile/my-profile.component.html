@@ -1,0 +1,20 @@
+<div>
+
+<div *ngIf="user">
+    <h2 class="mt-5" style="text-align: center; color: red;" >Profile</h2>
+    <div class="container mt-5" style="display: block; color: rgb(19, 179, 62);">
+    <p ><strong>Username:</strong> &nbsp; {{ user.userName }}</p>
+    <p><strong>First Name:</strong>  &nbsp;{{ user.firstName }}</p>
+    <p><strong>Last Name:</strong> &nbsp; {{ user.lastName }}</p>
+    <p><strong>Role:</strong> &nbsp; {{ user.role[0].roleName }}</p>
+    <button style="width: 30%;" mat-raised-button color="accent" (click)="updateProfile()"><mat-icon>settings_applications</mat-icon>Settings</button>
+   
+     
+    </div>
+</div>
+</div>
+
+   
+    
+    
+    
